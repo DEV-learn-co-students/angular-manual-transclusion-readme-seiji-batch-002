@@ -14,6 +14,8 @@ If we change over the value of our `transclude` property to `'element'` in our d
 
 This function returns our transcluded content as an actual DOM element. This allows us to manually append our elements into our directives instead.
 
+We might want to use this when we want to transform the transcluded elements depending on attributes. For instance, we could remove a `<button>` if the attribute disabled is present.
+
 ```js
 function ourDirective() {
   return {
@@ -46,7 +48,7 @@ function ourDirective() {
       '</div>'
     ].join(''),
     link: function (scope, element, attrs, ctrl, transclude) {
-        el.find('span').after(transclude());
+        element.find('span').after(transclude());
     }
   };
 }

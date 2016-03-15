@@ -10,7 +10,7 @@ Now that we know what transclusion does, we can look into more advanced methods 
 
 ## transclude()
 
-If we change over the value of our `transclude` property to `'element'` in our directives, we can use the fifth function provided in our `link` function.
+We can also use the fifth function provided in our `link` function.
 
 This function returns our transcluded content as an actual DOM element. This allows us to manually append our elements into our directives instead.
 
@@ -19,7 +19,7 @@ We might want to use this when we want to transform the transcluded elements dep
 ```js
 function ourDirective() {
   return {
-    transclude: 'element',
+    transclude: true,
     template: [
       '<div class="ourDirective">',
         'The content of our directive is: <span></span>',
@@ -41,7 +41,7 @@ Now that we've got the transcluded elements as actual DOM elements and also our 
 ```js
 function ourDirective() {
   return {
-    transclude: 'element',
+    transclude: true,
     template: [
       '<div class="ourDirective">',
         'The content of our directive is: <span></span>',

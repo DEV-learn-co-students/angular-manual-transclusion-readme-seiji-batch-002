@@ -10,9 +10,7 @@ Now that we know what transclusion does, we can look into more advanced methods 
 
 ## transclude()
 
-We can also use the fifth function provided in our `link` function.
-
-This function returns our transcluded content as an actual DOM element. This allows us to manually append our elements into our directives instead.
+We can also use the fifth function provided in our `link` function - `transclude`. This function returns our transcluded content as an actual DOM element. This allows us to manually append our elements into our directives instead.
 
 We might want to use this when we want to transform the transcluded elements depending on attributes. For instance, we could remove a `<button>` if the attribute disabled is present.
 
